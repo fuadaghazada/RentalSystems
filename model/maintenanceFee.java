@@ -9,20 +9,20 @@ package model;
  *
  * @author ENES VAROL
  */
-public class maintenanceFee extends payment{
-    propertyUnit paymentField;
+public class MaintenanceFee extends Payment{
+    PropertyUnit paymentField;
     public void payFee(){
     }
 
-    public propertyUnit getPaymentField() {
+    public PropertyUnit getPaymentField() {
         return paymentField;
     }
 
-    public void setPaymentField(propertyUnit paymentField) {
+    public void setPaymentField(PropertyUnit paymentField) {
         this.paymentField = paymentField;
     }
 
-    public maintenanceFee(propertyUnit paymentField) {
+    public MaintenanceFee(PropertyUnit paymentField) {
         this.paymentField = paymentField;
     }
     

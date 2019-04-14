@@ -9,7 +9,7 @@ package model;
  *
  * @author ENES VAROL
  */
-public abstract class property {
+public abstract class Property {
     String name;
     String description;
     String street;
@@ -18,14 +18,14 @@ public abstract class property {
     String district;
     String zipcode;
     String type;
-    public property() {
+    public Property() {
     }
     public void bookProperty(){
     }
     public void leaveProperty(){
     }
 
-    public property(String name, String description, String street, String district, String zipcode, String type) {
+    public Property(String name, String description, String street, String district, String zipcode, String type) {
         this.name = name;
         this.description = description;
         this.street = street;

@@ -12,17 +12,17 @@ import java.util.Date;
  *
  * @author ENES VAROL
  */
-public class booking {
-tenant tenant;
-propertyUnit property;
+public class Booking {
+Tenant tenant;
+PropertyUnit property;
 Date bookingDate;
 Date bookingStarts;
 Date bookingEnds;
-public ArrayList<booking> list(){
+public ArrayList<Booking> list(){
 return null;
 }
 
-    public booking(tenant tenant, propertyUnit property, Date bookingDate, Date bookingStarts, Date bookingEnds) {
+    public Booking(Tenant tenant, PropertyUnit property, Date bookingDate, Date bookingStarts, Date bookingEnds) {
         this.tenant = tenant;
         this.property = property;
         this.bookingDate = bookingDate;
@@ -30,19 +30,19 @@ return null;
         this.bookingEnds = bookingEnds;
     }
 
-    public tenant getTenant() {
+    public Tenant getTenant() {
         return tenant;
     }
 
-    public void setTenant(tenant tenant) {
+    public void setTenant(Tenant tenant) {
         this.tenant = tenant;
     }
 
-    public propertyUnit getProperty() {
+    public PropertyUnit getProperty() {
         return property;
     }
 
-    public void setProperty(propertyUnit property) {
+    public void setProperty(PropertyUnit property) {
         this.property = property;
     }
 

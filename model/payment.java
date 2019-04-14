@@ -12,12 +12,12 @@ import java.util.Date;
  *
  * @author ENES VAROL
  */
-public abstract class payment {
+public abstract class Payment {
     float amount;
     Date paymentDate;
     String description;
-    tenant payer;
-    public ArrayList<payment> list(){
+    Tenant payer;
+    public ArrayList<Payment> list(){
     return null;
     }
     public void pay(){

@@ -12,25 +12,25 @@ import java.util.Date;
  *
  * @author ENES VAROL
  */
-public class visitor {
+public class Visitor {
     String name;
     Date visitDate;
     int visitDuration;
-    tenant whoseVisitor;
+    Tenant whoseVisitor;
 
-    public visitor(String name, Date visitDate, int visitDuration, tenant whoseVisitor) {
+    public Visitor(String name, Date visitDate, int visitDuration, Tenant whoseVisitor) {
         this.name = name;
         this.visitDate = visitDate;
         this.visitDuration = visitDuration;
         this.whoseVisitor = whoseVisitor;
     }
-public void manage(String name, Date visitDate, int visitDuration, tenant whoseVisitor) {
+public void manage(String name, Date visitDate, int visitDuration, Tenant whoseVisitor) {
         this.name = name;
         this.visitDate = visitDate;
         this.visitDuration = visitDuration;
         this.whoseVisitor = whoseVisitor;
     }
-public ArrayList<visitor> list(){
+public ArrayList<Visitor> list(){
 return null;}
     public String getName() {
         return name;
@@ -56,11 +56,11 @@ return null;}
         this.visitDuration = visitDuration;
     }
 
-    public tenant getWhoseVisitor() {
+    public Tenant getWhoseVisitor() {
         return whoseVisitor;
     }
 
-    public void setWhoseVisitor(tenant whoseVisitor) {
+    public void setWhoseVisitor(Tenant whoseVisitor) {
         this.whoseVisitor = whoseVisitor;
     }
     

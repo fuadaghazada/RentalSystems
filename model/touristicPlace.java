@@ -9,12 +9,12 @@ package model;
  *
  * @author ENES VAROL
  */
-public class touristicPlace {
+public class TouristicPlace {
     String name;
     String description;
     String location;
 
-    public touristicPlace(String name, String description, String location) {
+    public TouristicPlace(String name, String description, String location) {
         this.name = name;
         this.description = description;
         this.location = location;

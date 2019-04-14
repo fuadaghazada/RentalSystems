@@ -12,14 +12,14 @@ import java.util.Date;
  *
  * @author ENES VAROL
  */
-public class issue {
+public class Issue {
     Date issueOpenDate;
     Date issueCloseDate;
     String issueTopic;
-    tenant issueOpener;
-    propertyManager issueCloser;
+    Tenant issueOpener;
+    PropertyManager issueCloser;
 
-    public issue(Date issueOpenDate, Date issueCloseDate, String issueTopic, tenant issueOpener, propertyManager issueCloser) {
+    public Issue(Date issueOpenDate, Date issueCloseDate, String issueTopic, Tenant issueOpener, PropertyManager issueCloser) {
         this.issueOpenDate = issueOpenDate;
         this.issueCloseDate = issueCloseDate;
         this.issueTopic = issueTopic;
@@ -51,23 +51,23 @@ public class issue {
         this.issueTopic = issueTopic;
     }
 
-    public tenant getIssueOpener() {
+    public Tenant getIssueOpener() {
         return issueOpener;
     }
 
-    public void setIssueOpener(tenant issueOpener) {
+    public void setIssueOpener(Tenant issueOpener) {
         this.issueOpener = issueOpener;
     }
 
-    public propertyManager getIssueCloser() {
+    public PropertyManager getIssueCloser() {
         return issueCloser;
     }
 
-    public void setIssueCloser(propertyManager issueCloser) {
+    public void setIssueCloser(PropertyManager issueCloser) {
         this.issueCloser = issueCloser;
     }
     
-    public ArrayList<issue> list(){
+    public ArrayList<Issue> list(){
     return null;
     }
     

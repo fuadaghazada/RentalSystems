@@ -12,24 +12,24 @@ import java.util.Date;
  *
  * @author ENES VAROL
  */
-public class event {
+public class Event {
     String name;
     String description;
-    propertyManager organizer;
+    PropertyManager organizer;
     Date dateCreated;
     Date eventDate;
-    public ArrayList<event> listEvents(){
+    public ArrayList<Event> listEvents(){
     return null;
     }
 
-    public event(String name, String description, propertyManager organizer, Date dateCreated, Date eventDate) {
+    public Event(String name, String description, PropertyManager organizer, Date dateCreated, Date eventDate) {
         this.name = name;
         this.description = description;
         this.organizer = organizer;
         this.dateCreated = dateCreated;
         this.eventDate = eventDate;
     }
-    public void manage(String name, String description, propertyManager organizer, Date dateCreated, Date eventDate) {
+    public void manage(String name, String description, PropertyManager organizer, Date dateCreated, Date eventDate) {
         this.name = name;
         this.description = description;
         this.organizer = organizer;
@@ -53,11 +53,11 @@ public class event {
         this.description = description;
     }
 
-    public propertyManager getOrganizer() {
+    public PropertyManager getOrganizer() {
         return organizer;
     }
 
-    public void setOrganizer(propertyManager organizer) {
+    public void setOrganizer(PropertyManager organizer) {
         this.organizer = organizer;
     }
 

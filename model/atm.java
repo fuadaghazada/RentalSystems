@@ -9,11 +9,11 @@ package model;
  *
  * @author ENES VAROL
  */
-public class atm {
+public class Atm {
     String bank;
     String location;
 
-    public atm(String bank, String location) {
+    public Atm(String bank, String location) {
         this.bank = bank;
         this.location = location;
     }

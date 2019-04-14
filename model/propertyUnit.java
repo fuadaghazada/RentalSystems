@@ -9,7 +9,7 @@ package model;
  *
  * @author ENES VAROL
  */
-public class propertyUnit {
+public class PropertyUnit {
     enum type{
     }
     String number;
@@ -18,7 +18,7 @@ public class propertyUnit {
     float rent;
     boolean isAvailable;
 
-    public propertyUnit(String number, int floor, String description, float rent, boolean isAvailable) {
+    public PropertyUnit(String number, int floor, String description, float rent, boolean isAvailable) {
         this.number = number;
         this.floor = floor;
         this.description = description;

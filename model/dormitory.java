@@ -11,19 +11,19 @@ import java.util.ArrayList;
  *
  * @author ENES VAROL
  */
-public class dormitory extends property{
-    ArrayList<tenant> roommates;
+public class Dormitory extends Property{
+    ArrayList<Tenant> roommates;
 
-    public dormitory(ArrayList<tenant> roommates, String name, String description, String street, String district, String zipcode, String type) {
+    public Dormitory(ArrayList<Tenant> roommates, String name, String description, String street, String district, String zipcode, String type) {
         super(name, description, street, district, zipcode, type);
         this.roommates = roommates;
     }
 
-    public ArrayList<tenant> getRoommates() {
+    public ArrayList<Tenant> getRoommates() {
         return roommates;
     }
 
-    public void setRoommates(ArrayList<tenant> roommates) {
+    public void setRoommates(ArrayList<Tenant> roommates) {
         this.roommates = roommates;
     }
     

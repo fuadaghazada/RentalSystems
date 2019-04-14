@@ -12,13 +12,13 @@ import java.util.Date;
  *
  * @author ENES VAROL
  */
-public class tenant {
+public class Tenant {
   Date livingStartDate;
   Date livingEndDate;
   float maxBudget;
   float minBudget;
 
-    public tenant(Date livingStartDate, Date livingEndDate, float maxBudget, float minBudget) {
+    public Tenant(Date livingStartDate, Date livingEndDate, float maxBudget, float minBudget) {
         this.livingStartDate = livingStartDate;
         this.livingEndDate = livingEndDate;
         this.maxBudget = maxBudget;
@@ -27,16 +27,16 @@ public class tenant {
     public void manage(Date livingStartDate, Date livingEndDate, float maxBudget, float minBudget){
     
     }
-    public ArrayList<tenant> list(){
+    public ArrayList<Tenant> list(){
     return null;
     }
     public void enterTime(){
     
     }
-    public ArrayList<tenant> listEntranceTimes(){
+    public ArrayList<Tenant> listEntranceTimes(){
     return null;
     }
-    public void markAway(tenant t){
+    public void markAway(Tenant t){
     
     }
     public Date getLivingStartDate() {

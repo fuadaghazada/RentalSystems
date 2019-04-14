@@ -9,20 +9,20 @@ package model;
  *
  * @author ENES VAROL
  */
-public class facility {
+public class Facility {
     String name;
     String description;
-    property propery;
+    Property propery;
     int openingHour;
     int closingHour;
     int capacity;
     int currentlyAllocated;
     public void listFacilities(){
     }
-    public void bookFacility(facility f){
+    public void bookFacility(Facility f){
     }
 
-    public facility(String name, String description, property propery, int openingHour, int closingHour, int capacity, int currentlyAllocated) {
+    public Facility(String name, String description, Property propery, int openingHour, int closingHour, int capacity, int currentlyAllocated) {
         this.name = name;
         this.description = description;
         this.propery = propery;
@@ -31,7 +31,7 @@ public class facility {
         this.capacity = capacity;
         this.currentlyAllocated = currentlyAllocated;
     }
-    public void manageFacility(String name, String description, property propery, int openingHour, int closingHour, int capacity, int currentlyAllocated) {
+    public void manageFacility(String name, String description, Property propery, int openingHour, int closingHour, int capacity, int currentlyAllocated) {
         this.name = name;
         this.description = description;
         this.propery = propery;
@@ -57,11 +57,11 @@ public class facility {
         this.description = description;
     }
 
-    public property getPropery() {
+    public Property getPropery() {
         return propery;
     }
 
-    public void setPropery(property propery) {
+    public void setPropery(Property propery) {
         this.propery = propery;
     }
 

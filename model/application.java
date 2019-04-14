@@ -11,16 +11,16 @@ import java.util.Date;
  *
  * @author ENES VAROL
  */
-public abstract class application {
+public abstract class Application {
     Date applyDate;
     int requestDuration;
-    tenant applicant;
-    propertyManager formCreator;
+    Tenant applicant;
+    PropertyManager formCreator;
     String agreementRules;
     public void fill(){
     }
 
-    public application(Date applyDate, int requestDuration, tenant applicant, propertyManager formCreator, String agreementRules) {
+    public Application(Date applyDate, int requestDuration, Tenant applicant, PropertyManager formCreator, String agreementRules) {
         this.applyDate = applyDate;
         this.requestDuration = requestDuration;
         this.applicant = applicant;
@@ -44,19 +44,19 @@ public abstract class application {
         this.requestDuration = requestDuration;
     }
 
-    public tenant getApplicant() {
+    public Tenant getApplicant() {
         return applicant;
     }
 
-    public void setApplicant(tenant applicant) {
+    public void setApplicant(Tenant applicant) {
         this.applicant = applicant;
     }
 
-    public propertyManager getFormCreator() {
+    public PropertyManager getFormCreator() {
         return formCreator;
     }
 
-    public void setFormCreator(propertyManager formCreator) {
+    public void setFormCreator(PropertyManager formCreator) {
         this.formCreator = formCreator;
     }
 

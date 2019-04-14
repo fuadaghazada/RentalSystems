@@ -11,38 +11,38 @@ import java.util.ArrayList;
  *
  * @author ENES VAROL
  */
-public class announcement {
-    propertyManager from;
-    property to;
+public class Announcement {
+    PropertyManager from;
+    Property to;
     String topic;
     String message;
 
-    public announcement(propertyManager from, property to, String topic, String message) {
+    public Announcement(PropertyManager from, Property to, String topic, String message) {
         this.from = from;
         this.to = to;
         this.topic = topic;
         this.message = message;
     }
-    public void manage(propertyManager from, property to, String topic, String message) {
+    public void manage(PropertyManager from, Property to, String topic, String message) {
         this.from = from;
         this.to = to;
         this.topic = topic;
         this.message = message;
     }
 
-    public propertyManager getFrom() {
+    public PropertyManager getFrom() {
         return from;
     }
 
-    public void setFrom(propertyManager from) {
+    public void setFrom(PropertyManager from) {
         this.from = from;
     }
 
-    public property getTo() {
+    public Property getTo() {
         return to;
     }
 
-    public void setTo(property to) {
+    public void setTo(Property to) {
         this.to = to;
     }
 
@@ -62,7 +62,7 @@ public class announcement {
         this.message = message;
     }
     
-    public ArrayList<announcement> listAnnouncements(){
+    public ArrayList<Announcement> listAnnouncements(){
     return null;
     }
 }

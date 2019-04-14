@@ -11,23 +11,23 @@ import java.util.ArrayList;
  *
  * @author ENES VAROL
  */
-public class parkingSpot {
-    tenant owner;
+public class ParkingSpot {
+    Tenant owner;
     int spotNum;
-    public ArrayList<parkingSpot> listParkingSpots(){
+    public ArrayList<ParkingSpot> listParkingSpots(){
     return null;
     }
 
-    public parkingSpot(tenant owner, int spotNum) {
+    public ParkingSpot(Tenant owner, int spotNum) {
         this.owner = owner;
         this.spotNum = spotNum;
     }
 
-    public tenant getOwner() {
+    public Tenant getOwner() {
         return owner;
     }
 
-    public void setOwner(tenant owner) {
+    public void setOwner(Tenant owner) {
         this.owner = owner;
     }
 

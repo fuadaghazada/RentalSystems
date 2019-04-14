@@ -12,16 +12,16 @@ import java.util.Date;
  *
  * @author ENES VAROL
  */
-public class faq {
+public class Faq {
     ArrayList<String> questions;
     ArrayList<String> answers;
-    tenant questioner;
-    propertyManager answerer;
+    Tenant questioner;
+    PropertyManager answerer;
     String questionTopic;
     Date askDate;
     Date answerDate;
 
-    public faq(ArrayList<String> questions, ArrayList<String> answers, tenant questioner, propertyManager answerer, String questionTopic, Date askDate, Date answerDate) {
+    public Faq(ArrayList<String> questions, ArrayList<String> answers, Tenant questioner, PropertyManager answerer, String questionTopic, Date askDate, Date answerDate) {
         this.questions = questions;
         this.answers = answers;
         this.questioner = questioner;
@@ -30,7 +30,7 @@ public class faq {
         this.askDate = askDate;
         this.answerDate = answerDate;
     }
-    public void manage(ArrayList<String> questions, ArrayList<String> answers, tenant questioner, propertyManager answerer, String questionTopic, Date askDate, Date answerDate) {
+    public void manage(ArrayList<String> questions, ArrayList<String> answers, Tenant questioner, PropertyManager answerer, String questionTopic, Date askDate, Date answerDate) {
         this.questions = questions;
         this.answers = answers;
         this.questioner = questioner;
@@ -56,19 +56,19 @@ public class faq {
         this.answers = answers;
     }
 
-    public tenant getQuestioner() {
+    public Tenant getQuestioner() {
         return questioner;
     }
 
-    public void setQuestioner(tenant questioner) {
+    public void setQuestioner(Tenant questioner) {
         this.questioner = questioner;
     }
 
-    public propertyManager getAnswerer() {
+    public PropertyManager getAnswerer() {
         return answerer;
     }
 
-    public void setAnswerer(propertyManager answerer) {
+    public void setAnswerer(PropertyManager answerer) {
         this.answerer = answerer;
     }
 
@@ -96,6 +96,6 @@ public class faq {
         this.answerDate = answerDate;
     }
     
-    public ArrayList<faq> listFaq(){
+    public ArrayList<Faq> listFaq(){
     return null;}
 }

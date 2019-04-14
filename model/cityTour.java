@@ -12,20 +12,20 @@ import java.util.Date;
  *
  * @author ENES VAROL
  */
-public class cityTour {
+public class CityTour {
     Date tourDate;
     float duration;
-    ArrayList<tenant> attendants;
-    propertyManager organizer;
+    ArrayList<Tenant> attendants;
+    PropertyManager organizer;
     String startLocation;
     String endLocation;
     Date startTime;
     Date endTime;
-    public ArrayList<cityTour> list(){
+    public ArrayList<CityTour> list(){
     return null;
     }
 
-    public cityTour(Date tourDate, float duration, ArrayList<tenant> attendants, propertyManager organizer, String startLocation, String endLocation, Date startTime, Date endTime) {
+    public CityTour(Date tourDate, float duration, ArrayList<Tenant> attendants, PropertyManager organizer, String startLocation, String endLocation, Date startTime, Date endTime) {
         this.tourDate = tourDate;
         this.duration = duration;
         this.attendants = attendants;
@@ -35,7 +35,7 @@ public class cityTour {
         this.startTime = startTime;
         this.endTime = endTime;
     }
-    public void manage(Date tourDate, float duration, ArrayList<tenant> attendants, propertyManager organizer, String startLocation, String endLocation, Date startTime, Date endTime) {
+    public void manage(Date tourDate, float duration, ArrayList<Tenant> attendants, PropertyManager organizer, String startLocation, String endLocation, Date startTime, Date endTime) {
         this.tourDate = tourDate;
         this.duration = duration;
         this.attendants = attendants;
@@ -54,11 +54,11 @@ public class cityTour {
         this.duration = duration;
     }
 
-    public void setAttendants(ArrayList<tenant> attendants) {
+    public void setAttendants(ArrayList<Tenant> attendants) {
         this.attendants = attendants;
     }
 
-    public void setOrganizer(propertyManager organizer) {
+    public void setOrganizer(PropertyManager organizer) {
         this.organizer = organizer;
     }
 

@@ -9,18 +9,18 @@ package model;
  *
  * @author ENES VAROL
  */
-public class rent extends payment {
-    propertyUnit paymentField;
+public class Rent extends Payment {
+    PropertyUnit paymentField;
 
-    public propertyUnit getPaymentField() {
+    public PropertyUnit getPaymentField() {
         return paymentField;
     }
 
-    public void setPaymentField(propertyUnit paymentField) {
+    public void setPaymentField(PropertyUnit paymentField) {
         this.paymentField = paymentField;
     }
 
-    public rent(propertyUnit paymentField) {
+    public Rent(PropertyUnit paymentField) {
         this.paymentField = paymentField;
     }
     

@@ -11,14 +11,14 @@ import java.util.Date;
  *
  * @author ENES VAROL
  */
-public class summerApplication extends application{
-    propertyUnit.type roomType;
+public class SummerApplication extends Application{
+    PropertyUnit.type roomType;
     int dormNumber;
     int roomNumber;
     Date startDate;
     Date endDate;
 
-    public summerApplication(Date applyDate, int requestDuration, tenant applicant, propertyManager formCreator, String agreementRules) {
+    public SummerApplication(Date applyDate, int requestDuration, Tenant applicant, PropertyManager formCreator, String agreementRules) {
         super(applyDate, requestDuration, applicant, formCreator, agreementRules);
     }
 }

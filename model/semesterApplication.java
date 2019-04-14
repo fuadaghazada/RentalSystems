@@ -11,12 +11,12 @@ import java.util.Date;
  *
  * @author ENES VAROL
  */
-public class semesterApplication extends application{
-    propertyUnit.type roomType;
+public class SemesterApplication extends Application{
+    PropertyUnit.type roomType;
     int dormNumber;
     int roomNumber;
 
-    public semesterApplication(Date applyDate, int requestDuration, tenant applicant, propertyManager formCreator, String agreementRules) {
+    public SemesterApplication(Date applyDate, int requestDuration, Tenant applicant, PropertyManager formCreator, String agreementRules) {
         super(applyDate, requestDuration, applicant, formCreator, agreementRules);
     }
 }

@@ -11,11 +11,11 @@ import java.util.ArrayList;
  *
  * @author ENES VAROL
  */
-public class rule {
+public class Rule {
     int number;
     String topic;
     String description;
-    public ArrayList<rule> listRules(){
+    public ArrayList<Rule> listRules(){
     return null;
     }
     public void postRules(){
@@ -23,7 +23,7 @@ public class rule {
     public void manageRules(){
     }
 
-    public rule(int number, String topic, String description) {
+    public Rule(int number, String topic, String description) {
         this.number = number;
         this.topic = topic;
         this.description = description;

@@ -9,10 +9,10 @@ package model;
  *
  * @author ENES VAROL
  */
-public class hotel extends property{
+public class Hotel extends Property{
     boolean hasView;
 
-    public hotel(boolean hasView, String name, String description, String street, String district, String zipcode, String type) {
+    public Hotel(boolean hasView, String name, String description, String street, String district, String zipcode, String type) {
         super(name, description, street, district, zipcode, type);
         this.hasView = hasView;
     }

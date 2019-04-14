@@ -11,12 +11,12 @@ import java.util.Date;
  *
  * @author ENES VAROL
  */
-public class propertyManager extends user{
+public class PropertyManager extends User{
     Date startDate;
     Date endDate;
     int yearsOfExperience;
 
-    public propertyManager(Date startDate, Date endDate, int yearsOfExperience, String name, String email, String password, String tckn, String phone) {
+    public PropertyManager(Date startDate, Date endDate, int yearsOfExperience, String name, String email, String password, String tckn, String phone) {
         super(name, email, password, tckn, phone);
         this.startDate = startDate;
         this.endDate = endDate;

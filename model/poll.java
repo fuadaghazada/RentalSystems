@@ -12,16 +12,16 @@ import java.util.Date;
  *
  * @author ENES VAROL
  */
-public class poll {
+public class Poll {
     String pollTopic;
     ArrayList<String> questions;
     ArrayList<String> choices;
     ArrayList<ArrayList<String>> stats;
     Date pollDate;
-    ArrayList<tenant> participants;
-    propertyManager pollOpener;
+    ArrayList<Tenant> participants;
+    PropertyManager pollOpener;
 
-    public poll(String pollTopic, ArrayList<String> questions, ArrayList<String> choices, ArrayList<ArrayList<String>> stats, Date pollDate, ArrayList<tenant> participants, propertyManager pollOpener) {
+    public Poll(String pollTopic, ArrayList<String> questions, ArrayList<String> choices, ArrayList<ArrayList<String>> stats, Date pollDate, ArrayList<Tenant> participants, PropertyManager pollOpener) {
         this.pollTopic = pollTopic;
         this.questions = questions;
         this.choices = choices;
@@ -71,19 +71,19 @@ public class poll {
         this.pollDate = pollDate;
     }
 
-    public ArrayList<tenant> getParticipants() {
+    public ArrayList<Tenant> getParticipants() {
         return participants;
     }
 
-    public void setParticipants(ArrayList<tenant> participants) {
+    public void setParticipants(ArrayList<Tenant> participants) {
         this.participants = participants;
     }
 
-    public propertyManager getPollOpener() {
+    public PropertyManager getPollOpener() {
         return pollOpener;
     }
 
-    public void setPollOpener(propertyManager pollOpener) {
+    public void setPollOpener(PropertyManager pollOpener) {
         this.pollOpener = pollOpener;
     }
     

@@ -11,26 +11,26 @@ import java.util.Date;
  *
  * @author ENES VAROL
  */
-public class request {
+public class Request {
     enum type{
     }
-    tenant requester;
+    Tenant requester;
     String note;
     Date date;
     public void request(type t){
     }
 
-    public request(tenant requester, String note, Date date) {
+    public Request(Tenant requester, String note, Date date) {
         this.requester = requester;
         this.note = note;
         this.date = date;
     }
 
-    public tenant getRequester() {
+    public Tenant getRequester() {
         return requester;
     }
 
-    public void setRequester(tenant requester) {
+    public void setRequester(Tenant requester) {
         this.requester = requester;
     }
 

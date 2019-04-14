@@ -11,15 +11,15 @@ import java.util.ArrayList;
  *
  * @author ENES VAROL
  */
-public class foodMenu {
+public class FoodMenu {
     String name;
     String description;
     ArrayList<ArrayList<String>> dailyMenus;
-    public ArrayList<foodMenu> listWeeklyFoodMenu(){
+    public ArrayList<FoodMenu> listWeeklyFoodMenu(){
     return null;
     }
 
-    public foodMenu(String name, String description, ArrayList<ArrayList<String>> dailyMenus) {
+    public FoodMenu(String name, String description, ArrayList<ArrayList<String>> dailyMenus) {
         this.name = name;
         this.description = description;
         this.dailyMenus = dailyMenus;

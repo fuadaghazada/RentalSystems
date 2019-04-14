@@ -11,38 +11,38 @@ import java.util.Date;
  *
  * @author ENES VAROL
  */
-public class notifacation {
-    propertyManager from;
-    tenant to;
+public class Notifacation {
+    PropertyManager from;
+    Tenant to;
     Date date;
     String message;
 
-    public notifacation(propertyManager from, tenant to, Date date, String message) {
+    public Notifacation(PropertyManager from, Tenant to, Date date, String message) {
         this.from = from;
         this.to = to;
         this.date = date;
         this.message = message;
     }
-    public void send(propertyManager from, tenant to, Date date, String message) {
+    public void send(PropertyManager from, Tenant to, Date date, String message) {
         this.from = from;
         this.to = to;
         this.date = date;
         this.message = message;
     }
 
-    public propertyManager getFrom() {
+    public PropertyManager getFrom() {
         return from;
     }
 
-    public void setFrom(propertyManager from) {
+    public void setFrom(PropertyManager from) {
         this.from = from;
     }
 
-    public tenant getTo() {
+    public Tenant getTo() {
         return to;
     }
 
-    public void setTo(tenant to) {
+    public void setTo(Tenant to) {
         this.to = to;
     }
 

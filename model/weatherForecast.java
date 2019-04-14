@@ -11,12 +11,12 @@ import java.util.ArrayList;
  *
  * @author ENES VAROL
  */
-public class weatherForecast {
+public class WeatherForecast {
     ArrayList<String> forecasts;
     ArrayList<Float> minTemps;
     ArrayList<Float> maxTemps;
 
-    public weatherForecast(ArrayList<String> forecasts, ArrayList<Float> minTemps, ArrayList<Float> maxTemps) {
+    public WeatherForecast(ArrayList<String> forecasts, ArrayList<Float> minTemps, ArrayList<Float> maxTemps) {
         this.forecasts = forecasts;
         this.minTemps = minTemps;
         this.maxTemps = maxTemps;
@@ -46,7 +46,7 @@ public class weatherForecast {
         this.maxTemps = maxTemps;
     }
     
-    public ArrayList<weatherForecast> list(){
+    public ArrayList<WeatherForecast> list(){
     return null;
     }
 }

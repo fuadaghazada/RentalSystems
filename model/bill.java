@@ -9,7 +9,7 @@ package model;
  *
  * @author ENES VAROL
  */
-public class bill extends payment{
+public class Bill extends Payment{
     enum type{
     }
     public void payBill(){

@@ -12,15 +12,15 @@ import java.util.Date;
  *
  * @author ENES VAROL
  */
-public class maintenanceActivity {
+public class MaintenanceActivity {
     String name;
     String description;
     String technicianInfo;
-    propertyUnit propertyUnit;
+    PropertyUnit propertyUnit;
     Date date;
     float cost;
 
-    public maintenanceActivity(String name, String description, String technicianInfo, propertyUnit propertyUnit, Date date, float cost) {
+    public MaintenanceActivity(String name, String description, String technicianInfo, PropertyUnit propertyUnit, Date date, float cost) {
         this.name = name;
         this.description = description;
         this.technicianInfo = technicianInfo;
@@ -28,7 +28,7 @@ public class maintenanceActivity {
         this.date = date;
         this.cost = cost;
     }
-    public void manage(String name, String description, String technicianInfo, propertyUnit propertyUnit, Date date, float cost) {
+    public void manage(String name, String description, String technicianInfo, PropertyUnit propertyUnit, Date date, float cost) {
         this.name = name;
         this.description = description;
         this.technicianInfo = technicianInfo;
@@ -61,11 +61,11 @@ public class maintenanceActivity {
         this.technicianInfo = technicianInfo;
     }
 
-    public propertyUnit getPropertyUnit() {
+    public PropertyUnit getPropertyUnit() {
         return propertyUnit;
     }
 
-    public void setPropertyUnit(propertyUnit propertyUnit) {
+    public void setPropertyUnit(PropertyUnit propertyUnit) {
         this.propertyUnit = propertyUnit;
     }
 
@@ -85,6 +85,6 @@ public class maintenanceActivity {
         this.cost = cost;
     }
     
-    public ArrayList<maintenanceActivity> listActivities(){
+    public ArrayList<MaintenanceActivity> listActivities(){
     return  null;}
 }

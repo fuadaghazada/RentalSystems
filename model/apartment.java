@@ -9,11 +9,11 @@ package model;
  *
  * @author ENES VAROL
  */
-public class apartment extends property{
+public class Apartment extends Property{
     String electricityNo;
     String waterNo;
 
-    public apartment(String electricityNo, String waterNo, String name, String description, String street, String district, String zipcode, String type) {
+    public Apartment(String electricityNo, String waterNo, String name, String description, String street, String district, String zipcode, String type) {
         super(name, description, street, district, zipcode, type);
         this.electricityNo = electricityNo;
         this.waterNo = waterNo;

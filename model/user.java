@@ -9,7 +9,7 @@ package model;
  *
  * @author ENES VAROL
  */
-public abstract class user {
+public abstract class User {
     String name;
     String email;
     String password;
@@ -56,7 +56,7 @@ public abstract class user {
         this.phone = phone;
     }
 
-    public user(String name, String email, String password, String tckn, String phone) {
+    public User(String name, String email, String password, String tckn, String phone) {
         this.name = name;
         this.email = email;
         this.password = password;
