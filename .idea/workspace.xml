@@ -2,69 +2,45 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="93141cc3-4825-40fe-8943-f7622b4b4986" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/target/classes/com/interdepartmental/model/Allocation.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/interdepartmental/model/Feedback.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/interdepartmental/model/IApplicable.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/interdepartmental/model/IPayable.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/interdepartmental/model/Information.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/interdepartmental/model/Subject.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/interdepartmental/repository/TenantRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/interdepartmental/repository/TenantRepositoryImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/interdepartmental/service/TenantService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/interdepartmental/service/TenantServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/interdepartmental/controller/CityTourController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/interdepartmental/controller/ParkingSpotController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/interdepartmental/controller/PollController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/interdepartmental/repository/CityTourRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/interdepartmental/repository/CityTourRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/interdepartmental/repository/ParkingSpotRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/interdepartmental/repository/ParkingSpotRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/interdepartmental/repository/PollRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/interdepartmental/repository/PollRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/interdepartmental/service/CityTourService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/interdepartmental/service/CityTourServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/interdepartmental/service/ParkingSpotService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/interdepartmental/service/ParkingSpotServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/interdepartmental/service/PollService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/interdepartmental/service/PollServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/interdepartmental/controller/RentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/interdepartmental/controller/RentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/interdepartmental/repository/RentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/interdepartmental/repository/RentRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/interdepartmental/repository/RentRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/interdepartmental/repository/RentRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/interdepartmental/service/RentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/interdepartmental/service/RentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/interdepartmental/service/RentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/interdepartmental/service/RentServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/interdepartmental/App.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/interdepartmental/controller/AnnouncementController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/interdepartmental/controller/AnnouncementController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/interdepartmental/controller/HomeController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rentalsystems.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/interdepartmental/model/ParkingSpot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/interdepartmental/model/ParkingSpot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/interdepartmental/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/interdepartmental/App.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/interdepartmental/model/Announcement.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/interdepartmental/model/Announcement.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/interdepartmental/model/Apartment.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/interdepartmental/model/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/interdepartmental/model/Application.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/interdepartmental/model/Atm.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/interdepartmental/model/Bill$type.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/interdepartmental/model/Bill.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/interdepartmental/model/Booking.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/interdepartmental/model/Booking.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/interdepartmental/model/Apartment.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/interdepartmental/model/Apartment.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/interdepartmental/model/Atm.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/interdepartmental/model/Atm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/interdepartmental/model/Bill$type.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/interdepartmental/model/Bill$type.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/interdepartmental/model/CityTour.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/interdepartmental/model/CityTour.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/interdepartmental/model/Dormitory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/interdepartmental/model/Dormitory.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/interdepartmental/model/Event.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/interdepartmental/model/Event.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/interdepartmental/model/Facility.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/interdepartmental/model/Facility.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/interdepartmental/model/Faq.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/interdepartmental/model/Faq.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/interdepartmental/model/FoodMenu.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/interdepartmental/model/Hotel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/interdepartmental/model/Hotel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/interdepartmental/model/Issue.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/interdepartmental/model/Issue.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/interdepartmental/model/FoodMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/interdepartmental/model/FoodMenu.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/interdepartmental/model/MaintenanceActivity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/interdepartmental/model/MaintenanceActivity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/interdepartmental/model/MaintenanceFee.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/interdepartmental/model/MaintenanceFee.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/interdepartmental/model/Notifacation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/interdepartmental/model/ParkingSpot.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/interdepartmental/model/Payment.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/interdepartmental/model/Payment.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/interdepartmental/model/Poll.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/interdepartmental/model/Property$city.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/interdepartmental/model/Property$city.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/interdepartmental/model/Property.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/interdepartmental/model/Property.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/interdepartmental/model/PropertyManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/interdepartmental/model/PropertyManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/interdepartmental/model/PropertyUnit$type.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/interdepartmental/model/PropertyUnit$type.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/interdepartmental/model/PropertyUnit.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/interdepartmental/model/PropertyUnit.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/interdepartmental/model/Rent.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/interdepartmental/model/Rent.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/interdepartmental/model/Request$type.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/interdepartmental/model/Request.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/interdepartmental/model/Rule.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/interdepartmental/model/Rule.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/interdepartmental/model/SemesterApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/interdepartmental/model/SemesterApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/interdepartmental/model/SummerApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/interdepartmental/model/SummerApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/interdepartmental/model/Notifacation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/interdepartmental/model/Notifacation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/interdepartmental/model/ParkingSpot.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/interdepartmental/model/ParkingSpot.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/interdepartmental/model/Poll.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/interdepartmental/model/Poll.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/interdepartmental/model/Request$type.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/interdepartmental/model/Request$type.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/interdepartmental/model/Request.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/interdepartmental/model/Request.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/interdepartmental/model/Tenant.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/interdepartmental/model/Tenant.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/interdepartmental/model/TouristicPlace.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/interdepartmental/model/TouristicPlace.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/interdepartmental/model/User$city.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/interdepartmental/model/User$city.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/interdepartmental/model/User$type.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/interdepartmental/model/User$type.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/interdepartmental/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/interdepartmental/model/User.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/interdepartmental/model/Visitor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/interdepartmental/model/Visitor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/interdepartmental/model/WeatherForecast.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/interdepartmental/repository/AnnouncementRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/interdepartmental/repository/AnnouncementRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/interdepartmental/repository/AnnouncementRepositoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/interdepartmental/repository/AnnouncementRepositoryImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/interdepartmental/service/AnnouncementService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/interdepartmental/service/AnnouncementService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/interdepartmental/service/AnnouncementServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/interdepartmental/AppTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/interdepartmental/model/WeatherForecast.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/interdepartmental/model/WeatherForecast.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/interdepartmental/service/AnnouncementServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/interdepartmental/service/AnnouncementServiceImpl.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -83,7 +59,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/interdepartmental/repository/RentRepositoryImpl.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="150">
-              <caret line="10" column="22" lean-forward="true" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+              <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -159,70 +135,7 @@
     <panes>
       <pane id="PackagesPane" />
       <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="rentalsystems" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RentalSystems" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="rentalsystems" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RentalSystems" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="rentalsystems" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RentalSystems" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="rentalsystems" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RentalSystems" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="rentalsystems" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RentalSystems" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="interdepartmental" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="rentalsystems" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RentalSystems" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="interdepartmental" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="rentalsystems" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RentalSystems" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="interdepartmental" type="462c0819:PsiDirectoryNode" />
-              <item name="repository" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="rentalsystems" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RentalSystems" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="interdepartmental" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
+      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -288,16 +201,15 @@
       <updated>1556900704522</updated>
       <workItem from="1556900716434" duration="49000" />
       <workItem from="1556900855837" duration="122000" />
-      <workItem from="1556901003084" duration="9351000" />
+      <workItem from="1556901003084" duration="9850000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9522000" />
+    <option name="totallyTimeSpent" value="10021000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="741" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2579666" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -699,7 +611,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/interdepartmental/repository/RentRepositoryImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
-          <caret line="10" column="22" lean-forward="true" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+          <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
