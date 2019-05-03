@@ -21,10 +21,6 @@ public class Tenant {
     float maxBudget;
     float minBudget;
 
-    public void manage(Date livingStartDate, Date livingEndDate, float maxBudget, float minBudget){
-
-    }
-
     public ArrayList<Tenant> list(){
     return null;
     }

@@ -25,5 +25,4 @@ public class PropertyManager extends User{
         this.endDate = endDate;
         this.yearsOfExperience = yearsOfExperience;
     }
-    
 }

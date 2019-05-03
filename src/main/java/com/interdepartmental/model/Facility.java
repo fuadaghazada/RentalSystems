@@ -27,14 +27,4 @@ public class Facility {
 
     public void bookFacility(Facility f){
     }
-
-    public void manageFacility(String name, String description, Property propery, int openingHour, int closingHour, int capacity, int currentlyAllocated) {
-        this.name = name;
-        this.description = description;
-        this.propery = propery;
-        this.openingHour = openingHour;
-        this.closingHour = closingHour;
-        this.capacity = capacity;
-        this.currentlyAllocated = currentlyAllocated;
-    }
 }

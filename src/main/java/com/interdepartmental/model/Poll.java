@@ -26,5 +26,4 @@ public class Poll {
     
     public void attendPoll(){
     }
-    
 }

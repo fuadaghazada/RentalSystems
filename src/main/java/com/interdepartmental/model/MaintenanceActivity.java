@@ -23,15 +23,6 @@ public class MaintenanceActivity {
     Date date;
     float cost;
 
-    public void manage(String name, String description, String technicianInfo, PropertyUnit propertyUnit, Date date, float cost) {
-        this.name = name;
-        this.description = description;
-        this.technicianInfo = technicianInfo;
-        this.propertyUnit = propertyUnit;
-        this.date = date;
-        this.cost = cost;
-    }
-    
     public ArrayList<MaintenanceActivity> listActivities(){
         return  null;
     }
