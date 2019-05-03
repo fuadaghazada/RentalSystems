@@ -19,6 +19,6 @@ public class ParkingSpot {
     int spotNum;
 
     public ArrayList<ParkingSpot> listParkingSpots(){
-    return null;
+        return null;
     }
 }
