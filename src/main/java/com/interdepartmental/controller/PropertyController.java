@@ -16,11 +16,6 @@ public class PropertyController {
         this.propertyService = propertyService;
     }
 
-    @PostMapping
-    public Property post(@RequestBody Property property) {
-        return propertyService.post(property);
-    }
-
     @GetMapping
     public ArrayList<Property> get() { return propertyService.get(); }
 }
