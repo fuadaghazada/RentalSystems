@@ -19,13 +19,8 @@ public class FoodMenu {
     String name;
     String description;
     ArrayList<ArrayList<String>> dailyMenus;
+
     public ArrayList<FoodMenu> listWeeklyFoodMenu(){
     return null;
-    }
-
-    public void manage(String name, String description, ArrayList<ArrayList<String>> dailyMenus) {
-        this.name = name;
-        this.description = description;
-        this.dailyMenus = dailyMenus;
     }
 }

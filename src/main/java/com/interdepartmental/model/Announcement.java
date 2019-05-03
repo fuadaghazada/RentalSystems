@@ -20,13 +20,6 @@ public class Announcement {
     String topic;
     String message;
 
-    public void manage(PropertyManager from, Property to, String topic, String message) {
-        this.from = from;
-        this.to = to;
-        this.topic = topic;
-        this.message = message;
-    }
-
     public ArrayList<Announcement> listAnnouncements(){
     return null;
     }

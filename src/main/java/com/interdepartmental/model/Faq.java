@@ -24,16 +24,6 @@ public class Faq {
     Date askDate;
     Date answerDate;
 
-    public void manage(ArrayList<String> questions, ArrayList<String> answers, Tenant questioner, PropertyManager answerer, String questionTopic, Date askDate, Date answerDate) {
-        this.questions = questions;
-        this.answers = answers;
-        this.questioner = questioner;
-        this.answerer = answerer;
-        this.questionTopic = questionTopic;
-        this.askDate = askDate;
-        this.answerDate = answerDate;
-    }
-    
     public ArrayList<Faq> listFaq(){
         return null;
     }

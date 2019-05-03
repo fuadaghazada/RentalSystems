@@ -21,13 +21,6 @@ public class Visitor {
     int visitDuration;
     Tenant whoseVisitor;
 
-    public void manage(String name, Date visitDate, int visitDuration, Tenant whoseVisitor) {
-        this.name = name;
-        this.visitDate = visitDate;
-        this.visitDuration = visitDuration;
-        this.whoseVisitor = whoseVisitor;
-    }
-
     public ArrayList<Visitor> list(){
         return null;
     }

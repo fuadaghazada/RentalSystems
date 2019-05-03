@@ -25,12 +25,4 @@ public class Event {
     public ArrayList<Event> listEvents(){
     return null;
     }
-
-    public void manage(String name, String description, PropertyManager organizer, Date dateCreated, Date eventDate) {
-        this.name = name;
-        this.description = description;
-        this.organizer = organizer;
-        this.dateCreated = dateCreated;
-        this.eventDate = eventDate;
-    }
 }
