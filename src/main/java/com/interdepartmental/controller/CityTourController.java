@@ -31,7 +31,7 @@ public class CityTourController {
     @GetMapping
     public CityTour get(@RequestHeader(value="User-Agent") final String currentUserAgent, HttpServletResponse response,
                         @RequestParam String topic) {
-        final UserAgentController.UserAgent expectedUserAgent = UserAgentController.UserAgent.MANAGER;
+        final UserAgentController.UserAgent expectedUserAgent = UserAgentController.UserAgent.ALL;
         if(!UserAgentController.checkUserAgent(expectedUserAgent, currentUserAgent)){
             response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
             return null;
