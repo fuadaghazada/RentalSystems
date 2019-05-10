@@ -5,7 +5,7 @@ import com.interdepartmental.model.Poll;
 import java.util.ArrayList;
 
 public interface PollRepository {
-    void post(Poll poll);
+    Poll post(Poll poll);
 
     ArrayList<Poll> get();
 }

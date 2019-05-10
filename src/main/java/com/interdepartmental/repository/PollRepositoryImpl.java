@@ -10,8 +10,9 @@ public class PollRepositoryImpl implements PollRepository {
     private ArrayList<Poll> polls = new ArrayList<>();
 
     @Override
-    public void post(Poll poll){
+    public Poll post(Poll poll){
         polls.add(poll);
+        return poll;
     }
 
     @Override
