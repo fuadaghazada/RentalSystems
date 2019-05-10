@@ -1,15 +1,12 @@
 package com.interdepartmental.model;
 
-import org.apache.catalina.core.ApplicationContext;
-import org.springframework.beans.factory.annotation.Autowired;
-
-
 public class ObserverConfig {
 
     private PropertyManager propertyManager = new PropertyManager();
+    private Booking booking = new Booking();
 
-    @Autowired
-    public ObserverConfig(ApplicationContext context) {
-//        context.getBean(Booking.class).registerObserver(propertyManager);
+    public ObserverConfig() {
+        booking.registerObserver(propertyManager);
+        booking.notifyObserver();
     }
 }

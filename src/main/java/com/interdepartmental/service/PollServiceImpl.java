@@ -21,8 +21,6 @@ public class PollServiceImpl implements PollService {
     @Override
     public Poll post(Poll poll){
         poll.setPollDate(new Date());
-        poll.setPollConductor(new PropertyManager());
-        poll.setParticipants(new ArrayList<Tenant>());
         return pollRepository.post(poll);
     }
 

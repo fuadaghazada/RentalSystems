@@ -40,7 +40,7 @@ public class Booking implements Subject {
     public void notifyObserver() {
         for(Observer observer: observers)
         {
-            observer.notify();
+            observer.update();
         }
     }
 }
