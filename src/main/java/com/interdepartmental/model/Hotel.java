@@ -10,14 +10,16 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.ArrayList;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class Hotel extends Property{
     boolean hasView;
 
-    public Hotel(boolean hasView, String name, String description, String street, String district, String zipcode, String type) {
-        super(name, description, street, district, zipcode, type);
+    public Hotel(String name, String description, String street, String district, String zipcode, String type, ArrayList<PropertyUnit> propertyUnits, boolean hasView) {
+        super(name, description, street, district, zipcode, type, propertyUnits);
         this.hasView = hasView;
     }
 }

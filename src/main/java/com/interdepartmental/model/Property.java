@@ -10,6 +10,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.ArrayList;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -22,6 +24,8 @@ public abstract class Property {
     String district;
     String zipcode;
     String type;
+
+    ArrayList<PropertyUnit> propertyUnits;
 
     public void bookProperty(){
     }

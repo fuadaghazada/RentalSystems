@@ -17,8 +17,10 @@ import java.util.ArrayList;
 public class Dormitory extends Property{
     ArrayList<Tenant> roommates;
 
-    public Dormitory(ArrayList<Tenant> roommates, String name, String description, String street, String district, String zipcode, String type) {
-        super(name, description, street, district, zipcode, type);
+    public Dormitory(String name, String description, String street, String district, String zipcode, String type, ArrayList<PropertyUnit> propertyUnits, ArrayList<Tenant> roommates){
+        super(name, description, street, district, zipcode, type, propertyUnits);
         this.roommates = roommates;
     }
+
+
 }

@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 
+
 @Service
 public class PropertyServiceImpl implements PropertyService {
     private PropertyRepository propertyRepository;
@@ -16,6 +17,11 @@ public class PropertyServiceImpl implements PropertyService {
 
     @Override
     public ArrayList<Property> get() {
-        return propertyRepository.get();
+        String systemType = System.getProperty("spring.profiles.active");
+
+        if (systemType == null) {
+            return propertyRepository.get("apartment");
+        }
+        return propertyRepository.get(systemType);
     }
 }

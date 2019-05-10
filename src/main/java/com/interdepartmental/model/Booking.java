@@ -15,7 +15,7 @@ import java.util.Date;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Booking {
+public class Booking implements Subject {
     Tenant tenant;
     PropertyUnit property;
     Date bookingDate;
@@ -24,5 +24,20 @@ public class Booking {
 
     public ArrayList<Booking> list(){
         return null;
+    }
+
+    @Override
+    public void registerObserver() {
+
+    }
+
+    @Override
+    public void removeObserver() {
+
+    }
+
+    @Override
+    public void notifyObserver() {
+
     }
 }
