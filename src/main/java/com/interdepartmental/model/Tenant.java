@@ -15,11 +15,19 @@ import java.util.Date;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Tenant {
+public class Tenant extends User {
     Date livingStartDate;
     Date livingEndDate;
     float maxBudget;
     float minBudget;
+
+    public Tenant(Date livingStartDate, Date livingEndDate, float maxBudget, float minBudget, String name, String email, String password, String tckn, String phone) {
+        super(name, email, password, tckn, phone);
+        this.livingStartDate = livingStartDate;
+        this.livingEndDate = livingEndDate;
+        this.maxBudget = maxBudget;
+        this.minBudget = minBudget;
+    }
 
     public ArrayList<Tenant> list(){
     return null;
