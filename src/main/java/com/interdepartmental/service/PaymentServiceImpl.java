@@ -19,8 +19,6 @@ public class PaymentServiceImpl implements PaymentService {
     public Payment post(Payment payment) {
         String systemType = System.getProperty("spring.profiles.active");
 
-        System.out.println(payment);
-
         if (systemType == null) {
             return paymentRepository.post("apartment", payment);
         }

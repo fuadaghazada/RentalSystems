@@ -34,7 +34,7 @@ public class PaymentController {
 
     @PostMapping
     public Payment payRent(@RequestHeader(value="User-Agent") final String currentUserAgent, HttpServletResponse response,
-                        @RequestBody Rent payment)
+                        @RequestBody Payment payment)
     {
         final UserAgentController.UserAgent expectedUserAgent = UserAgentController.UserAgent.TENANT;
         if(!UserAgentController.checkUserAgent(expectedUserAgent, currentUserAgent)){

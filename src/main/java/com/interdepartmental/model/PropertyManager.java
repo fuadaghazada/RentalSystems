@@ -28,6 +28,6 @@ public class PropertyManager extends User implements Observer{
 
     @Override
     public void update() {
-
+        System.out.println("Booking updated!");
     }
 }

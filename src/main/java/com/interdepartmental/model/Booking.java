@@ -8,6 +8,7 @@ package com.interdepartmental.model;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.context.annotation.Bean;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -22,22 +23,24 @@ public class Booking implements Subject {
     Date bookingStarts;
     Date bookingEnds;
 
-    public ArrayList<Booking> list(){
-        return null;
+    public ArrayList<Observer> observers = new ArrayList<>();
+
+    @Override
+    @Bean
+    public void registerObserver(Observer observer) {
+        observers.add(observer);
     }
 
     @Override
-    public void registerObserver() {
-
-    }
-
-    @Override
-    public void removeObserver() {
-
+    public void removeObserver(Observer observer) {
+        observers.remove(observer);
     }
 
     @Override
     public void notifyObserver() {
-
+        for(Observer observer: observers)
+        {
+            observer.notify();
+        }
     }
 }

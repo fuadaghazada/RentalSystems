@@ -15,7 +15,7 @@ import java.util.Date;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public abstract class Payment {
+public abstract class Payment implements IPayable{
     float amount;
     Date paymentDate;
     String description;
