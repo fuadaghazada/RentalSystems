@@ -5,6 +5,7 @@ import com.interdepartmental.model.Tenant;
 import com.interdepartmental.service.TenantService;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletResponse;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Map;
@@ -19,12 +20,27 @@ public class TenantController {
     }
 
     @PostMapping
-    public Tenant post(@RequestBody Tenant tenant) {
+    public Tenant post(@RequestHeader(value="User-Agent") final String currentUserAgent, HttpServletResponse response,
+                       @RequestBody Tenant tenant) {
+
+        final UserAgentController.UserAgent expectedUserAgent = UserAgentController.UserAgent.MANAGER;
+        if(!UserAgentController.checkUserAgent(expectedUserAgent, currentUserAgent)){
+            response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
+            return null;
+        }
+
         return tenantService.post(tenant);
     }
 
     @GetMapping
-    public ArrayList<Tenant> get() {
+    public ArrayList<Tenant> get(@RequestHeader(value="User-Agent") final String currentUserAgent, HttpServletResponse response) {
+
+        final UserAgentController.UserAgent expectedUserAgent = UserAgentController.UserAgent.MANAGER;
+        if(!UserAgentController.checkUserAgent(expectedUserAgent, currentUserAgent)){
+            response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
+            return null;
+        }
+
         return tenantService.get();
     }
 }

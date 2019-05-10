@@ -32,7 +32,7 @@ public class AnnouncementController {
 
     @GetMapping
     @RequestMapping("auth")
-    public boolean auth(@RequestHeader(value="User-Agent") String currentUserAgent, HttpServletResponse response) {
+    public boolean auth(@RequestHeader(value="User-Agent") final String currentUserAgent, HttpServletResponse response) {
         final UserAgentController.UserAgent expectedUserAgent = UserAgentController.UserAgent.MANAGER;
         if(!UserAgentController.checkUserAgent(expectedUserAgent, currentUserAgent)){
             response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
