@@ -30,12 +30,12 @@ public class CityTourController {
 
     @GetMapping
     public CityTour get(@RequestHeader(value="User-Agent") final String currentUserAgent, HttpServletResponse response,
-                        @RequestParam String topic) {
+                        @RequestParam String startLocation) {
         final UserAgentController.UserAgent expectedUserAgent = UserAgentController.UserAgent.ALL;
         if(!UserAgentController.checkUserAgent(expectedUserAgent, currentUserAgent)){
             response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
             return null;
         }
-        return cityTourService.get(topic);
+        return cityTourService.get(startLocation);
     }
 }
