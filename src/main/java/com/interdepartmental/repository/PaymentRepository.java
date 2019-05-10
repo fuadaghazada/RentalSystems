@@ -5,7 +5,7 @@ import com.interdepartmental.model.Payment;
 import java.util.ArrayList;
 
 public interface PaymentRepository {
-    ArrayList<Payment> get();
+    ArrayList<Payment> get(String systemType);
 
-    void post(Payment payment);
+    Payment post(String systemType, Payment payment);
 }

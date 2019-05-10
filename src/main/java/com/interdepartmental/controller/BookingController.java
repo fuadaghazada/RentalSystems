@@ -48,7 +48,7 @@ public class BookingController {
     @GetMapping
     public ArrayList<Booking> get(@RequestHeader(value="User-Agent") final String currentUserAgent, HttpServletResponse response)
     {
-        final UserAgentController.UserAgent expectedUserAgent = UserAgentController.UserAgent.ALL;
+        final UserAgentController.UserAgent expectedUserAgent = UserAgentController.UserAgent.MANAGER;
         if(!UserAgentController.checkUserAgent(expectedUserAgent, currentUserAgent)){
             response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
             return null;

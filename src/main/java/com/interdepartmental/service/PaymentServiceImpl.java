@@ -1,6 +1,7 @@
 package com.interdepartmental.service;
 
 import com.interdepartmental.model.Payment;
+import com.interdepartmental.model.Rent;
 import com.interdepartmental.repository.PaymentRepository;
 import org.springframework.stereotype.Service;
 
@@ -15,12 +16,26 @@ public class PaymentServiceImpl implements PaymentService {
     }
 
     @Override
-    public void post(Payment payment) {
-        paymentRepository.post(payment);
+    public Payment post(Payment payment) {
+        String systemType = System.getProperty("spring.profiles.active");
+
+        System.out.println(payment);
+
+        if (systemType == null) {
+            return paymentRepository.post("apartment", payment);
+        }
+
+        return paymentRepository.post(systemType, payment);
     }
 
     @Override
     public ArrayList<Payment> get() {
-        return paymentRepository.get();
+        String systemType = System.getProperty("spring.profiles.active");
+
+        if (systemType == null) {
+            return paymentRepository.get("apartment");
+        }
+
+        return paymentRepository.get(systemType);
     }
 }

@@ -1,6 +1,9 @@
 package com.interdepartmental.controller;
 
+import com.interdepartmental.model.Bill;
+import com.interdepartmental.model.MaintenanceFee;
 import com.interdepartmental.model.Payment;
+import com.interdepartmental.model.Rent;
 import com.interdepartmental.service.PaymentService;
 import org.springframework.web.bind.annotation.*;
 
@@ -19,26 +22,51 @@ public class PaymentController {
     }
 
     @GetMapping
-    public ArrayList<Payment> get()
-    {
+    public ArrayList<Payment> get(@RequestHeader(value="User-Agent") final String currentUserAgent, HttpServletResponse response) {
+        final UserAgentController.UserAgent expectedUserAgent = UserAgentController.UserAgent.MANAGER;
+        if(!UserAgentController.checkUserAgent(expectedUserAgent, currentUserAgent)){
+            response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
+            return null;
+        }
+
         return paymentService.get();
     }
 
     @PostMapping
-    public Map post(@RequestBody Payment payment)
+    public Payment payRent(@RequestHeader(value="User-Agent") final String currentUserAgent, HttpServletResponse response,
+                        @RequestBody Rent payment)
     {
-        paymentService.post(payment);
-        return Collections.singletonMap("result", "ok");
-    }
-
-    @GetMapping
-    @RequestMapping("auth")
-    public boolean auth(@RequestHeader(value="User-Agent") final String currentUserAgent, HttpServletResponse response) {
-        final UserAgentController.UserAgent expectedUserAgent = UserAgentController.UserAgent.MANAGER;
+        final UserAgentController.UserAgent expectedUserAgent = UserAgentController.UserAgent.TENANT;
         if(!UserAgentController.checkUserAgent(expectedUserAgent, currentUserAgent)){
             response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
-            return false;
+            return null;
         }
-        return true;
+        return paymentService.post(payment);
+    }
+
+    @PostMapping
+    @RequestMapping("maintenanceFee")
+    public Payment payMaintenanceFee(@RequestHeader(value="User-Agent") final String currentUserAgent, HttpServletResponse response,
+                        @RequestBody MaintenanceFee payment)
+    {
+        final UserAgentController.UserAgent expectedUserAgent = UserAgentController.UserAgent.TENANT;
+        if(!UserAgentController.checkUserAgent(expectedUserAgent, currentUserAgent)){
+            response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
+            return null;
+        }
+        return paymentService.post(payment);
+    }
+
+    @PostMapping
+    @RequestMapping("bill")
+    public Payment payBill(@RequestHeader(value="User-Agent") final String currentUserAgent, HttpServletResponse response,
+                        @RequestBody Bill payment)
+    {
+        final UserAgentController.UserAgent expectedUserAgent = UserAgentController.UserAgent.TENANT;
+        if(!UserAgentController.checkUserAgent(expectedUserAgent, currentUserAgent)){
+            response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
+            return null;
+        }
+        return paymentService.post(payment);
     }
 }
