@@ -15,8 +15,13 @@ public class BookingServiceImpl implements BookingService {
     }
 
     @Override
-    public void post(Booking book) {
-        bookingRepository.post(book);
+    public Booking post(Booking book) {
+        return bookingRepository.post(book);
+    }
+
+    @Override
+    public Booking delete(String tenantName) {
+        return bookingRepository.delete(tenantName);
     }
 
     @Override

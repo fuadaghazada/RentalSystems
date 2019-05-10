@@ -6,8 +6,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletResponse;
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Map;
+
 
 @RestController
 @RequestMapping("api/v1/booking")
@@ -20,26 +19,41 @@ public class BookingController {
     }
 
     @PostMapping
-    public Map post(@RequestBody Booking booking)
+    public Booking post(@RequestHeader(value="User-Agent") final String currentUserAgent, HttpServletResponse response,
+                     @RequestBody Booking booking)
     {
-        bookingService.post(booking);
-        return Collections.singletonMap("result", "ok");
-    }
-
-    @GetMapping
-    public ArrayList<Booking> get()
-    {
-        return bookingService.get();
-    }
-
-    @GetMapping
-    @RequestMapping("auth")
-    public boolean auth(@RequestHeader(value="User-Agent") final String currentUserAgent, HttpServletResponse response) {
-        final UserAgentController.UserAgent expectedUserAgent = UserAgentController.UserAgent.MANAGER;
+        final UserAgentController.UserAgent expectedUserAgent = UserAgentController.UserAgent.TENANT;
         if(!UserAgentController.checkUserAgent(expectedUserAgent, currentUserAgent)){
             response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
-            return false;
+            return null;
         }
-        return true;
+        // Adding Book and returning it
+        return bookingService.post(booking);
+    }
+
+    @DeleteMapping
+    public Booking leaveProperty(@RequestHeader(value="User-Agent") final String currentUserAgent, HttpServletResponse response,
+                                 @RequestParam("tenantName") String tenantName)
+    {
+        final UserAgentController.UserAgent expectedUserAgent = UserAgentController.UserAgent.TENANT;
+        if(!UserAgentController.checkUserAgent(expectedUserAgent, currentUserAgent)){
+            response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
+            return null;
+        }
+        // Removing the book
+        return bookingService.delete(tenantName);
+    }
+
+
+    @GetMapping
+    public ArrayList<Booking> get(@RequestHeader(value="User-Agent") final String currentUserAgent, HttpServletResponse response)
+    {
+        final UserAgentController.UserAgent expectedUserAgent = UserAgentController.UserAgent.ALL;
+        if(!UserAgentController.checkUserAgent(expectedUserAgent, currentUserAgent)){
+            response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
+            return null;
+        }
+
+        return bookingService.get();
     }
 }

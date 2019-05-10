@@ -7,5 +7,6 @@ import java.util.ArrayList;
 public interface BookingRepository {
     ArrayList<Booking> get();
 
-    void post(Booking booking);
+    Booking post(Booking booking);
+    Booking delete(String tenantName);
 }
