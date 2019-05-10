@@ -15,8 +15,8 @@ public class PollServiceImpl implements PollService {
     }
 
     @Override
-    public void post(Poll poll){
-        pollRepository.post(poll);
+    public Poll post(Poll poll){
+     return   pollRepository.post(poll);
     }
 
     @Override

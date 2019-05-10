@@ -18,9 +18,14 @@ public class PollController {
     }
 
     @PostMapping
-    public Map post(@RequestBody Poll poll) {
-        pollService.post(poll);
-        return Collections.singletonMap("result", "ok");
+    public Poll post(@RequestHeader(value="User-Agent") final String currentUserAgent, HttpServletResponse response,
+                    @RequestBody Poll poll) {
+        final UserAgentController.UserAgent expectedUserAgent = UserAgentController.UserAgent.MANAGER;
+        if(!UserAgentController.checkUserAgent(expectedUserAgent, currentUserAgent)){
+            response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
+            return null;
+        }
+        return pollService.post(poll);
     }
 
     @GetMapping
@@ -38,4 +43,5 @@ public class PollController {
         }
         return true;
     }
+
 }
