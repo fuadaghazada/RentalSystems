@@ -2,8 +2,11 @@ package com.interdepartmental.controller;
 
 import com.interdepartmental.model.Announcement;
 import com.interdepartmental.service.AnnouncementService;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletResponse;
 import java.util.Collections;
 import java.util.Map;
 
@@ -29,11 +32,12 @@ public class AnnouncementController {
 
     @GetMapping
     @RequestMapping("auth")
-    public boolean auth(@RequestHeader(value="User-Agent") String userAgent) {
-        if(userAgent.equals("manager")){
-            return true;
-        }else{
+    public boolean auth(@RequestHeader(value="User-Agent") String currentUserAgent, HttpServletResponse response) {
+        final UserAgentController.UserAgent expectedUserAgent = UserAgentController.UserAgent.MANAGER;
+        if(!UserAgentController.checkUserAgent(expectedUserAgent, currentUserAgent)){
+            response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
             return false;
         }
+        return true;
     }
 }
