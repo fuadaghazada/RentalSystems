@@ -10,8 +10,9 @@ public class CityTourRepositoryImpl implements CityTourRepository {
     private ArrayList<CityTour> cityTours = new ArrayList<>();
 
     @Override
-    public void post(CityTour cityTour){
+    public CityTour post(CityTour cityTour){
         cityTours.add(cityTour);
+        return cityTour;
     }
 
     @Override

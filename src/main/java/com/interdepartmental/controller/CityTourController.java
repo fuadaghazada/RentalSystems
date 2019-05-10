@@ -18,13 +18,14 @@ public class CityTourController {
     }
 
     @PostMapping
-    public Map post(@RequestBody CityTour cityTour) {
-        cityTourService.post(cityTour);
-        return Collections.singletonMap("result", "ok");
+    public CityTour post(@RequestHeader(value="User-Agent") final String currentUserAgent, HttpServletResponse response,
+                         @RequestBody CityTour cityTour) {
+        return cityTourService.post(cityTour);
     }
 
     @GetMapping
-    public CityTour get(@RequestParam String topic) {
+    public CityTour get(@RequestHeader(value="User-Agent") final String currentUserAgent, HttpServletResponse response,
+                        @RequestParam String topic) {
         return cityTourService.get(topic);
     }
 

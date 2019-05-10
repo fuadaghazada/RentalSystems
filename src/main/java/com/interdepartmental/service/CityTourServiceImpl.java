@@ -15,8 +15,8 @@ public class CityTourServiceImpl implements CityTourService {
     }
 
     @Override
-    public void post(CityTour cityTour){
-        cityTourRepository.post(cityTour);
+    public CityTour post(CityTour cityTour){
+        return cityTourRepository.post(cityTour);
     }
 
     @Override
