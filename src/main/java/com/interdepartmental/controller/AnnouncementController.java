@@ -26,4 +26,14 @@ public class AnnouncementController {
     public Announcement get(@RequestParam String topic) {
         return announcementService.get(topic);
     }
+
+    @GetMapping
+    @RequestMapping("auth")
+    public boolean auth(@RequestHeader(value="User-Agent") String userAgent) {
+        if(userAgent.equals("manager")){
+            return true;
+        }else{
+            return false;
+        }
+    }
 }
