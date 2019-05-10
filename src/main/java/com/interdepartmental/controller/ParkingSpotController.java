@@ -5,11 +5,12 @@ import com.interdepartmental.service.ParkingSpotService;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletResponse;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Map;
 
 @RestController
-@RequestMapping("api/v1/parkingspot")
+@RequestMapping("api/v1/parkingSpot")
 public class ParkingSpotController {
     private ParkingSpotService parkingSpotService;
 
@@ -18,24 +19,24 @@ public class ParkingSpotController {
     }
 
     @PostMapping
-    public Map post(@RequestBody ParkingSpot parkingSpot) {
+    public Map post(@RequestHeader(value="User-Agent") final String currentUserAgent, HttpServletResponse response,
+                    @RequestBody ParkingSpot parkingSpot) {
+        final UserAgentController.UserAgent expectedUserAgent = UserAgentController.UserAgent.MANAGER;
+        if(!UserAgentController.checkUserAgent(expectedUserAgent, currentUserAgent)){
+            response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
+            return Collections.singletonMap("result", "UNAUTHORIZED");
+        }
         parkingSpotService.post(parkingSpot);
         return Collections.singletonMap("result", "ok");
     }
 
     @GetMapping
-    public ParkingSpot get(@RequestParam int num) {
-        return parkingSpotService.get(num);
-    }
-
-    @GetMapping
-    @RequestMapping("auth")
-    public boolean auth(@RequestHeader(value="User-Agent") final String currentUserAgent, HttpServletResponse response) {
-        final UserAgentController.UserAgent expectedUserAgent = UserAgentController.UserAgent.MANAGER;
+    public ArrayList<ParkingSpot> get(@RequestHeader(value="User-Agent") final String currentUserAgent, HttpServletResponse response) {
+        final UserAgentController.UserAgent expectedUserAgent = UserAgentController.UserAgent.ALL;
         if(!UserAgentController.checkUserAgent(expectedUserAgent, currentUserAgent)){
             response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
-            return false;
+            return null;
         }
-        return true;
+        return parkingSpotService.get();
     }
 }

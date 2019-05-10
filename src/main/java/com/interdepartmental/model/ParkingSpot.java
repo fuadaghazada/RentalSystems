@@ -17,8 +17,4 @@ import java.util.ArrayList;
 public class ParkingSpot {
     Tenant owner;
     int spotNum;
-
-    public ArrayList<ParkingSpot> listParkingSpots(){
-        return null;
-    }
 }

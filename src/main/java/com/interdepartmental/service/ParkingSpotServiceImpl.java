@@ -20,12 +20,7 @@ public class ParkingSpotServiceImpl implements ParkingSpotService {
     }
 
     @Override
-    public ParkingSpot get(int num){
-        for(ParkingSpot parkingSpot : parkingSpotRepository.get()){
-            if(parkingSpot.getSpotNum() == num){
-                return parkingSpot;
-            }
-        }
-        return null;
+    public ArrayList<ParkingSpot> get(){
+        return parkingSpotRepository.get();
     }
 }
