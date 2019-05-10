@@ -10,15 +10,15 @@ public class PropertyRepositoryImpl implements PropertyRepository{
 
     private ArrayList<Property> apartments = new ArrayList<Property>(){{
         add(new Apartment("Lakeside", "It is near the lake", "Lake street", "Lake district", "06700", "apartment", new ArrayList<PropertyUnit>(){{
-            add(new PropertyUnit());
+            add(new PropertyUnit("3", 1, "This is a mediocre flat", 800.45f, true));
         }}, "106", "107"));
         // **********
         add(new Apartment("Mountainside", "It is near the mountain", "Mountain street", "Mountain district", "06800", "apartment", new ArrayList<PropertyUnit>(){{
-            add(new PropertyUnit());
+            add(new PropertyUnit("1", 2, "This is a good flat", 1000.45f, true));
         }}, "108", "109"));
         // **********
         add(new Apartment("Seaside", "It is near the sea", "Sea street", "Sea district", "06900", "apartment", new ArrayList<PropertyUnit>(){{
-            add(new PropertyUnit());
+            add(new PropertyUnit("41", 3, "This is a bad flat", 500.45f, true));
         }}, "110", "111"));
 
     }};
