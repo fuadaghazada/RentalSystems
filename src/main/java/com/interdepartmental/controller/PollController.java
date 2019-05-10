@@ -1,6 +1,7 @@
 package com.interdepartmental.controller;
 
 import com.interdepartmental.model.Poll;
+import com.interdepartmental.model.Tenant;
 import com.interdepartmental.service.PollService;
 import org.springframework.web.bind.annotation.*;
 
@@ -28,20 +29,25 @@ public class PollController {
         return pollService.post(poll);
     }
 
-    @GetMapping
-    public Poll get(@RequestParam String topic) {
-        return pollService.get(topic);
+    @PutMapping
+    public Map put(@RequestHeader(value="User-Agent") final String currentUserAgent, HttpServletResponse response,
+                    @RequestParam String topic, @RequestBody Tenant tenant, @RequestParam boolean isFirstSelected) {
+        final UserAgentController.UserAgent expectedUserAgent = UserAgentController.UserAgent.TENANT;
+        if(!UserAgentController.checkUserAgent(expectedUserAgent, currentUserAgent)){
+            response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
+            return Collections.singletonMap("result", "UNAUTHORIZED");
+        }
+        return Collections.singletonMap("result", pollService.put(topic, tenant, isFirstSelected));
     }
 
     @GetMapping
-    @RequestMapping("auth")
-    public boolean auth(@RequestHeader(value="User-Agent") final String currentUserAgent, HttpServletResponse response) {
+    public Poll get(@RequestHeader(value="User-Agent") final String currentUserAgent, HttpServletResponse response,
+                    @RequestParam String topic) {
         final UserAgentController.UserAgent expectedUserAgent = UserAgentController.UserAgent.MANAGER;
         if(!UserAgentController.checkUserAgent(expectedUserAgent, currentUserAgent)){
             response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
-            return false;
+            return null;
         }
-        return true;
+        return pollService.get(topic);
     }
-
 }

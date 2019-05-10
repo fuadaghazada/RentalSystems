@@ -17,13 +17,11 @@ import java.util.Date;
 @AllArgsConstructor
 public class Poll {
     String pollTopic;
-    ArrayList<String> questions;
-    ArrayList<String> choices;
-    ArrayList<ArrayList<String>> stats;
     Date pollDate;
+    PropertyManager pollConductor;
     ArrayList<Tenant> participants;
-    PropertyManager pollOpener;
-    
-    public void attendPoll(){
-    }
+    String firstOptionText;
+    int firstOptionCount;
+    String secondOptionText;
+    int secondOptionCount;
 }
