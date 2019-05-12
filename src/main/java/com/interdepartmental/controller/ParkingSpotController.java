@@ -2,6 +2,7 @@ package com.interdepartmental.controller;
 
 import com.interdepartmental.model.ParkingSpot;
 import com.interdepartmental.service.ParkingSpotService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletResponse;
@@ -13,6 +14,8 @@ import java.util.Map;
 @RequestMapping("api/v1/parkingSpot")
 public class ParkingSpotController {
     private ParkingSpotService parkingSpotService;
+    @Autowired
+    private FeatureFlagController flag;
 
     public ParkingSpotController(ParkingSpotService parkingSpotService){
         this.parkingSpotService = parkingSpotService;
@@ -21,6 +24,10 @@ public class ParkingSpotController {
     @PostMapping
     public Map post(@RequestHeader(value="User-Agent") final String currentUserAgent, HttpServletResponse response,
                     @RequestBody ParkingSpot parkingSpot) {
+        if(!flag.checkFeatureFlag("assingParking")){
+            response.setStatus(HttpServletResponse.SC_METHOD_NOT_ALLOWED);
+            return Collections.singletonMap("result", "METHOD NOT ALLOWED");
+        }
         final UserAgentController.UserAgent expectedUserAgent = UserAgentController.UserAgent.MANAGER;
         if(!UserAgentController.checkUserAgent(expectedUserAgent, currentUserAgent)){
             response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
@@ -32,6 +39,10 @@ public class ParkingSpotController {
 
     @GetMapping
     public ArrayList<ParkingSpot> get(@RequestHeader(value="User-Agent") final String currentUserAgent, HttpServletResponse response) {
+        if(!flag.checkFeatureFlag("listParking")){
+            response.setStatus(HttpServletResponse.SC_METHOD_NOT_ALLOWED);
+            return null;
+        }
         final UserAgentController.UserAgent expectedUserAgent = UserAgentController.UserAgent.ALL;
         if(!UserAgentController.checkUserAgent(expectedUserAgent, currentUserAgent)){
             response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
